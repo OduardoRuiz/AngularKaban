@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <h1>Ferramenta Kanban</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav class="sidenav" #sidenav mode="side" opened="true">
+    <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon style="margin-right: 10px">assessment</mat-icon>Olá,
+        {{ usuario }}</a
+      >
+
+      <div></div>
+
+      <a mat-list-item>
+        <button class="iconSave" mat-button (click)="salvarLocalstorage()">
+          <mat-icon>save</mat-icon>
+        </button>
+        <input [(ngModel)]="apareceNatela" class="inputUsuario" type="text" />
+      </a>
+
+      <a mat-list-item routerLink="/kanban">
+        <mat-icon style="margin-right: 10px">assessment</mat-icon> Kanban</a
+      >
+      <a mat-list-item routerLink="/sobre">
+        <mat-icon style="margin-right: 10px">info</mat-icon>Sobre</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-container>
+    <div class="calc">
+      <main>
+        <mat-card>
+          <router-outlet></router-outlet>
+        </mat-card>
+      </main>
+    </div>
+  </mat-sidenav-container>
+</mat-sidenav-container>

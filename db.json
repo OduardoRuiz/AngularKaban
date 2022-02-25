@@ -1,0 +1,36 @@
+{
+  "todo": [
+    {
+      "nome": "Tarefa",
+      "categoria": "pessoal",
+      "descricao": "descrição da tarefa agora,\ntemos que fazer uma descrição maior para colocar no arroz ",
+      "cor": "amarelo",
+      "tipo": 2,
+      "id": 1
+    },
+    {
+      "nome": "dgdfgdg",
+      "categoria": "trabalho",
+      "descricao": "dgfds dsfgd fgdxgfd dgfdg asfgdsfg ds ",
+      "cor": "verde",
+      "tipo": 3,
+      "id": 3
+    },
+    {
+      "nome": "saddzf",
+      "categoria": "Trabalho",
+      "descricao": "sfsf s asdf fawd sf dfs afsdaf sdafz fa dasf afads",
+      "cor": "vermelho",
+      "tipo": 1,
+      "id": 4
+    },
+    {
+      "nome": "pato legal",
+      "categoria": "Faculdade",
+      "descricao": "um pato muito bonito passando no seu trabalho",
+      "cor": "verde",
+      "tipo": 1,
+      "id": 5
+    }
+  ]
+}

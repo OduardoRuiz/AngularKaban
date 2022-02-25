@@ -1,0 +1,150 @@
+<body>
+    <section class="painel">
+        <div cdkDropListGroup>
+            <div class="meio">
+                <div class="example-container">
+                    <h2>Para fazer</h2>
+
+                    <!--inicio do DropList/Drag And Drop -->
+
+                    <div cdkDropList [cdkDropListData]="todo" class="example-list" (cdkDropListDropped)="drop($event)"
+                        (cdkDropListEntered)="chegou('todo')">
+                        <div class="example-box" *ngFor="let item of todo" cdkDrag (cdkDragStarted)="informacao(item)">
+                            <div class="cartao" *ngIf="item.tipo===1" class="cartao">
+                                <div>
+                                    <div class="tarefa">
+                                        {{item.nome}}
+                                    </div>
+                                    <div class="tag">
+                                        {{item.categoria}}
+                                    </div>
+                                    <div class="descrição">
+                                        <textarea class="textarea" disabled value={{item.descricao}} type="text" cols="31" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class={{item.cor}}>
+                                    <button mat-button color="basic" class="botaocard" (click)="editar(item);">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-button color="basic" class="botaocard" (click)="excluir(item.id);">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-container">
+                    <h2>Em processo</h2>
+
+                    <div cdkDropList [cdkDropListData]="doing" class="example-list" (cdkDropListDropped)="drop($event)"
+                        (cdkDropListEntered)="chegou('doing')">
+                        <div class="example-box" *ngFor="let item of todo" cdkDrag (cdkDragStarted)="informacao(item)">
+                            <div *ngIf="item.tipo===2" class="cartao">
+                                <div>
+                                    <div class="tarefa">
+                                        {{item.nome}}
+                                    </div>
+                                    <div class="tag">
+                                        {{item.categoria}}
+                                    </div>
+                                    <div class="descrição">
+                                        <textarea class="textarea" disabled value={{item.descricao}} type="text" cols="31" rows="10"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class={{item.cor}}>
+                                    <button mat-button color="basic" class="botaocard" (click)="editar(item);">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-button color="basic" class="botaocard" (click)="excluir(item.id);">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-container">
+                    <h2>Finalizadas</h2>
+
+                    <div cdkDropList [cdkDropListData]="done" class="example-list" (cdkDropListDropped)="drop($event)"
+                        (cdkDropListEntered)="chegou('done')">
+                        <div class="example-box" *ngFor="let item of todo" cdkDrag (cdkDragStarted)="informacao(item)">
+                            <div *ngIf="item.tipo===3" class="cartao">
+                                <div>
+                                    <div class="tarefa">
+                                        {{item.nome}}
+                                    </div>
+                                    <div class="tag">
+                                        {{item.categoria}}
+                                    </div>
+                                    <div class="descrição">
+                                        <textarea class="textarea" class="textarea" disabled value={{item.descricao}} type="text" cols="31" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class={{item.cor}}>
+                                    <button mat-button color="" class="botaocard" (click)="editar(item);">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-button color="" class="botaocard" (click)="excluir(item.id);">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Final do Drag And Drop e inicio do botão de cadastrar uma nova tarefa-->
+    <section class="caixaDescricao">
+        <button mat-button color="primary" class="botaoNovo" (click)="novo();">
+            <mat-icon>add_circle</mat-icon>
+        </button>
+
+        <div *ngIf="todo1">
+            <div>
+                <input class="caixaNome" type="text" placeholder=" Nome da Tarefa" [(ngModel)]="todo1.nome">
+            </div>
+            <div>
+                <!--Select para "selecionar uma categoria"-->
+                <select [(ngModel)]="todo1.categoria" class="selectOpcoes" required>
+                    <option value="" disabled selected>Selecione uma categoria</option>
+                    <option value="Faculdade">Faculdade</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Pessoal">Pessoal</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+            <div>
+                <!--Select para "selecionar uma prioridade"-->
+                <select [(ngModel)]="todo1.cor" class="selectOpcoes" required>
+                    <option value="" disabled selected>Selecione uma propriedade</option>
+                    <option value="vermelho">Urgente</option>
+                    <option value="amarelo">Atenção</option>
+                    <option value="verde">Moderado</option>
+                </select>
+            </div>
+            <div>
+                <textarea class="caixaTexto" type="text" cols="31" rows="10" placeholder="Descrição"
+                    [(ngModel)]="todo1.descricao"></textarea>
+            </div>
+
+            <button mat-button color="" class="botaoCancelar" (click)="cancelar();">
+                <mat-icon>cancel_presentation</mat-icon>
+            </button>
+            <button mat-button color="" class="botaoSalvar" (click)="salvar();">
+                <mat-icon>save</mat-icon>
+            </button>
+
+        </div>
+    </section>
+</body>

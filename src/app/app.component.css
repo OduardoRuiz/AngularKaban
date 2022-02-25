@@ -1,0 +1,22 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+/* footer fim da página*/
+.calc {
+  min-height: calc(100vh - 64px);
+}
+
+.inputUsuario {
+  max-width: 80px;
+  background-color: gray;
+  color: honeydew;
+  margin: 33px;
+}
+/*icone de salvar*/
+.iconSave {
+  padding: 0px;
+  margin: 0px;
+  max-width: 5px;
+  min-width: 0px;
+  padding-right: 0px;
+}

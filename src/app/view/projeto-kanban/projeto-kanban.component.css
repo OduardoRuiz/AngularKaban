@@ -1,0 +1,157 @@
+.example-container {
+  width: 300px;
+  max-width: 100%;
+  margin: 5px;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.example-list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+}
+.example-box {
+  color: rgba(0, 0, 0, 0.87);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+}
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.painel {
+  text-align: center;
+  padding-left: 10px;
+}
+/*botoes*/
+.botaoNovo {
+  margin: 0.5rem;
+  padding: 10px 0;
+  color: #3342b3;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  transition: 1s all;
+  margin-bottom: 2rem;
+}
+.botaoCancelar {
+  background-color: rgb(252, 66, 66);
+  width: 7rem;
+  margin: 0.5rem;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+.botaoSalvar {
+  background-color: rgb(66, 161, 66);
+  width: 7rem;
+  margin: 0.5rem;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+.botaocard {
+  align-items: flex-end;
+  color: white;
+}
+/* input da tarefa*/
+.caixaNome {
+  width: 14.5rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  border-style: none;
+}
+.caixaNome::placeholder, .caixaTexto::placeholder {
+  color: black;
+}
+/*input da caixa de descricao*/
+.caixaTexto {
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  border-style: none;
+}
+.descricao {
+  opacity: 80%;
+  border-radius: 5px;
+  margin-bottom: 0.3rem;
+  font-size: medium;
+}
+/*fundo da pagina*/
+body {
+  background-color: gray;
+}
+.cartao {
+  text-align: center;
+  border-bottom: solid 1px #ccc;
+  display: flex;
+}
+.tarefa {
+  opacity: 80%;
+  background-color: rgb(201, 184, 184);
+  border-radius: 0px;
+  margin-bottom: 0.05rem;
+  font-size: large;
+  font-size: 18px;
+}
+.tag {
+  opacity: 80%;
+  background-color: rgb(213, 177, 247);
+  margin-bottom: 0.05rem;
+  font-size: small;
+}
+/*selecao de opcoes*/
+.selectOpcoes {
+  width: 238px;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 30px;
+  border-radius: 5px;
+}
+/* cores das tags */
+.vermelho {
+  background-color: rgb(252, 66, 66);
+}
+.amarelo {
+  background-color: rgb(245, 205, 29);
+}
+.verde {
+  background-color: rgb(66, 161, 66);
+}
+.textarea {
+  border-color: rgba(255, 255, 255, 0);
+}
