@@ -1,27 +1,60 @@
 # Kanban
+![GitHub repo size](https://img.shields.io/github/repo-size/OduardoRuiz/AngularKaban?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/OduardoRuiz/AngularKaban?style=for-the-badge)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> Projeto Desenvolvido para o curso de Sistemas para Internet no Senac, no 4º semestre.
+> consiste em um sistema de Organização de tarefas através de cards (Kanban),
+Este projeto tem como objetivo auxiliar na organização das tarefas dos seus usuários, sendo possível separar as tarefas por tags (Urgente, atenção e moderado) com auxilio visuais das cores que ficam ao lado do card, e também é separado por categorias (Faculdade, trabalho pessoal e outros), outra funcionalidade é guardar seu nome via local storage este que fica ao lado esquerdo da tela.
+  
 
-## Code scaffolding
+## 💻 Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de começar, verifique se você atende aos seguintes requisitos:
+* Linguagens, Angular  Versão 11.2.14, Node 16.13.0
+* Atraves do node ter o json server instalado
+* Desenvolvidos em sistema Windonws
+* 
 
-## Build
+## 🚀 Instalando Kaban
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para instalar o Kaban, siga estas etapas:
 
-## Running unit tests
+git clone https://github.com/OduardoRuiz/AngularKaban.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Após isso no CMD, utilizar os comandos, "cd kanban" para acessar a pasta do projeto, 
+"npm install" para instalar as dependencias do node modules 
+"json-server --watch db.json" para subir o servidor json server 
+e finalmente "ng serve" para subir a aplicação 
+caso o localhost:4200 não reconheça a aplicação utilizar a tag "--host seuIpLocal", se isso for necessario a endpoint dentro do arquivo "enviroment" necessitará ser substituida
 
-## Running end-to-end tests
+## 🤝 Colaboradores
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Agradeço às seguintes pessoas que contribuíram para este projeto:
 
-## Further help
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/TamirisR">
+        <img src="https://avatars.githubusercontent.com/u/60622574?v=4" width="100px;" alt="Foto da Tamiris Rodrigues no GitHub"/><br>
+        <sub>
+          <b>Tamires Rodrigues</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/hugoerico">
+        <img src="https://avatars.githubusercontent.com/u/53500258?v=4" width="100px;" alt="Foto do Hugo Erico no GitHub"/><br>
+        <sub>
+          <b>Hugo Erico</b>
+        </sub>
+      </a>
+    </td>
+    
+  </tr>
+</table>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+[⬆ Voltar ao topo](#Kanban)<br>
