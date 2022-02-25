@@ -14,8 +14,7 @@ Este projeto tem como objetivo auxiliar na organização das tarefas dos seus us
 Antes de começar, verifique se você atende aos seguintes requisitos:
 * Linguagens, Angular  Versão 11.2.14, Node 16.13.0
 * Atraves do node ter o json server instalado
-* Desenvolvidos em sistema Windonws
-* 
+* Desenvolvidos em sistema windows
 
 ## 🚀 Instalando Kaban
 
